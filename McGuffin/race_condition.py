@@ -4,7 +4,6 @@
 # threading
 import concurrent.futures
 import logging
-import threading
 import time
 
 logger = logging.getLogger('RaceCondition')
@@ -14,10 +13,6 @@ stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
 stream_handler.setLevel(logging.DEBUG)
 logger.addHandler(stream_handler)
-
-
-def thread_function(name):
-    logger.info(f"Thread {name}")
 
 
 class FakeDatabase:
@@ -37,6 +32,7 @@ class FakeDatabase:
         local_copy = self.value
         local_copy += 1
         time.sleep(0.1)
+        self.value = local_copy
         logger.info(f"Thread {name}: finishing update")
 
 
