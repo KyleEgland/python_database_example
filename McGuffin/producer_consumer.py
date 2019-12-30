@@ -10,7 +10,7 @@ import threading
 
 # Logger setup
 logger = logging.getLogger('ProducerConsumer')
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 formatter = logging.Formatter('%(name)s: (%(levelname)s) %(message)s')
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
