@@ -3,7 +3,7 @@ Click==7.0
 Mako==1.1.0
 MarkupSafe==1.1.1
 psutil==5.6.7
-PyMySQL==0.9.3
+PyMySQL==1.1.1
 python-dateutil==2.8.1
 python-dotenv==0.10.3
 python-editor==1.0.4
